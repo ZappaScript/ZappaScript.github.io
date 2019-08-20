@@ -1,0 +1,40 @@
+.project-grid__outline{
+    --notchSize: 20px;
+    display: flex;
+    margin: 0%;
+    clip-path: polygon(calc(100% - var(--notchSize)) 0%, 100% var(--notchSize), 100% 100%, var(--notchSize) 100%, 0% calc(100% - var(--notchSize)), 0 0);
+    padding:0%;
+    height: 100%;
+    background-color: rgba(0, 239, 255, 0.125);
+    color: rgba($color: #ffffff, $alpha: 0.7);
+    
+}
+.project-grid__outline:hover{
+    background-color: rgba(0, 239, 255, 1);
+    transition: all 0.2s;
+
+}
+.project-grid__card{
+    --notchSize: 20px;
+    flex:1;
+    padding:2.5%;
+    background-color: rgba(0, 0, 0, 1);
+    margin: 2px 1px;
+    clip-path: polygon(calc(100% - var(--notchSize)) 0%, 100% var(--notchSize), 100% 100%, var(--notchSize) 100%, 0% calc(100% - var(--notchSize)), 0 0);
+    height:auto;
+    text-align: center;
+    display:flex;
+    justify-content: space-around;
+    span {
+        display:flex;
+        flex-direction: column;
+    }
+}
+.project-grid__stripes{
+    flex: 0.2 1 0%;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent calc(1vw - 1px), rgba(255,255,255,1) 1vw, rgba(255,255,255,1) 1.5vw);
+}
+:host{
+    --notchSize: 20px;
+    clip-path: polygon(calc(100% - var(--notchSize)) 0%, 100% var(--notchSize), 100% 100%, var(--notchSize) 100%, 0% calc(100% - var(--notchSize)), 0 0);
+}

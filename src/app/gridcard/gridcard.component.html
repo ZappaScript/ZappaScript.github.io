@@ -1,0 +1,22 @@
+<div class='project-grid__outline'>
+  <div class='project-grid__card'>
+    <span [style.display]="'flex'"> 
+      <div [style.flex]="1">
+        <h3 [style.text-transform]="'uppercase'" [style.letter-spacing]="'0.1rem'" attr.text-content="{{project.name}}" >{{project.name}}</h3>
+      </div>
+      <div class='project-grid__stripes'></div>
+        <app-language [languages]='project.languages'>
+
+          </app-language>
+    </span>
+    <span> 
+        <iframe title="project.name" [src] = "iframeSrc" scrolling="no" frameBorder="0" height='auto' width='auto'> </iframe> 
+        
+          <p >{{project.description}}</p>
+          <p>{{project.src}}</p>
+        
+    </span>
+    
+  </div>
+
+</div>

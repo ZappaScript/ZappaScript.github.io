@@ -1,0 +1,20 @@
+<div>
+    <span (click)="pagLeft()"> 
+      <strong [style.color]="getCurrentIndex()==1 ? 'rgb(0,63,0)':'rgb(20,255,0)'" >  &lt; </strong>
+    </span>
+    <span *ngIf="getCurrentIndex()==1; else elseBlock">
+        <a><strong [style.color]="'rgb(20,255,0)'">{{getCurrentIndex()}}</strong></a> <span><strong [style.color]="'rgb(0,63,0)'"> ... </strong></span> <a><strong [style.color]="'rgb(0,63,0)'">{{getNumPages()}}</strong></a> 
+        
+    </span>
+    <ng-template #elseBlock>
+      <span  *ngIf="getCurrentIndex()==getNumPages(); else finalElse" >
+        <a><strong [style.color]="'rgb(0,63,0)'">{{1}}</strong> </a>  <span><strong [style.color]="'rgb(0,63,0)'"> ... </strong></span>  <a><strong [style.color]="'rgb(20,255,0)'">{{getNumPages()}} </strong></a> 
+      </span>  
+    </ng-template>
+    <ng-template #finalElse>
+        <a>{{1}} </a> <span><strong [style.color]="'rgb(0,63,0)'">...</strong></span> <a><strong [style.color]="'green'">{{getCurrentIndex()}} </strong></a> <span><strong [style.color]="'rgb(0,63,0)'"> ... </strong></span> <a>{{getNumPages()}}</a> 
+    </ng-template>
+    
+    
+  <span (click)="pagRight()"> <strong [style.color]="getCurrentIndex()==getNumPages()? 'rgb(0,63,0)' :'rgb(20,255,0)'">  &gt; </strong></span>
+</div>

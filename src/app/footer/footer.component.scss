@@ -1,0 +1,22 @@
+.footer {
+  flex-shrink: 0;
+  border-top: 2px solid rgb(20, 255, 0);
+  width: 100%;
+  height: 5vh;
+  margin-top: auto;
+
+  span {
+    color: rgb(20, 255, 0);
+    
+    * {
+      vertical-align: middle;
+    }
+  }
+
+
+}
+
+img {
+  height: 1.5rem;
+  //padding: 0.25rem;
+}

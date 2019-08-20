@@ -1,0 +1,29 @@
+.project-grid{
+    display: grid;
+    margin:2%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+ 
+    column-gap: 40px;
+    row-gap: 40px;
+    
+  }
+  
+  .project-grid__card{
+  
+    //background: rgba(rgb(0,249,255),0.35);
+    box-shadow: 2px 2px;
+    transition : all 0.25s;
+  }
+  
+  .project-grid__card:hover{
+    //background: rgba(rgb(0,249,255),0.50);
+    box-shadow: 6px 6px;
+    transition : all 0.25s;
+  
+  }
+  :host {
+
+    flex:1;
+    
+  }

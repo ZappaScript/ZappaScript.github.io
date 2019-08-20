@@ -1,0 +1,31 @@
+.project-grid__card {
+  --notchSize: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0%;
+  -webkit-clip-path: polygon(calc(100% - var(--notchSize)) 0%, 100% var(--notchSize), 100% 100%, var(--notchSize) 100%, 0% calc(100% - var(--notchSize)), 0 0);
+          clip-path: polygon(calc(100% - var(--notchSize)) 0%, 100% var(--notchSize), 100% 100%, var(--notchSize) 100%, 0% calc(100% - var(--notchSize)), 0 0);
+  padding: 0%;
+  height: 100%;
+}
+
+.test {
+  --notchSize: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 5%;
+  background-color: rgba(0, 0, 0, 0.125);
+  margin: 2px 1px;
+  -webkit-clip-path: polygon(calc(100% - var(--notchSize)) 0%, 100% var(--notchSize), 100% 100%, var(--notchSize) 100%, 0% calc(100% - var(--notchSize)), 0 0);
+          clip-path: polygon(calc(100% - var(--notchSize)) 0%, 100% var(--notchSize), 100% 100%, var(--notchSize) 100%, 0% calc(100% - var(--notchSize)), 0 0);
+  height: auto;
+}
+
+:host {
+  --notchSize: 20px;
+  -webkit-clip-path: polygon(calc(100% - var(--notchSize)) 0%, 100% var(--notchSize), 100% 100%, var(--notchSize) 100%, 0% calc(100% - var(--notchSize)), 0 0);
+          clip-path: polygon(calc(100% - var(--notchSize)) 0%, 100% var(--notchSize), 100% 100%, var(--notchSize) 100%, 0% calc(100% - var(--notchSize)), 0 0);
+}
+/*# sourceMappingURL=gridcard.component.css.map */

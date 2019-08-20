@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+$background_color : black;
+$sn_n_cols : 12;
+.nested-menu{
+    background-color: rgb(255, 0, 239);
+    z-index: 5;
+    position: absolute;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    display:none;
+    list-style: none;
+    width:100%;
+  
+  }
+.site-navigation{
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    background-color: $background_color;
+    width:100%;
+    border-bottom:2px;
+    border-bottom-style: solid;
+    color:rgb(20, 255, 0);
+    text-align: left;
+    
+    span{
+      position: relative;
+      text-decoration: none;
+      color:rgb(20, 255, 0);
+      justify-content: center;
+      font-size: 1.5rem;
+
+      
+    }
+  
+    span:nth-child(1), span:nth-child(1) * { text-align:left;grid-column: 1; padding:0, 0, 0 ,0.5vw; margin:0;}
+    span:nth-child(2){ text-align:center;grid-column: 6/8;}
+    span:nth-child(3){ text-align:center;grid-column: 10;}
+    span:nth-child(4){ text-align:center;grid-column: 11;}
+    span:nth-child(5){ text-align:center;grid-column: 12;}
+  
+    span:hover{
+      background-color: rgb(255, 0, 239);
+      color: rgb(0, 249, 255);
+      .nested-menu{display:block;}
+      .nested-menu *:hover{
+        background:blue;
+        a{color:white;}
+  
+      }
+      p{
+        color: rgb(0, 249, 255)
+      }
+      a {color:rgb(0, 249, 255); 
+        
+      }
+      
+    }
+    
+    .selectedLocale{
+      color:yellow;
+      font-size: 1.5rem;
+    }
+  
+      a{
+      font-size: 1.5rem;
+      
+      p{
+        
+        padding:0;
+        margin:0;
+        /*text-transform: uppercase;*/
+        
+        }
+      
+      p span{
+        padding:0;
+        margin:0;
+        color:yellow;
+      }
+      
+    }
+  }
+  
