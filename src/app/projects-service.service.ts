@@ -15,5 +15,6 @@ export class ProjectsService {
   getLanguages(repo: string){
 
     return this.http.get(`https://api.github.com/repos/ZappaScript/${repo}/languages`)
+    
   }
 }
