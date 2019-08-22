@@ -10,7 +10,7 @@
           </app-language>
     </span>
     <span> 
-    <img [src]='getSafeUrl(previewImage)' alt="" srcset="">
+    <img [src]='project.previewImage' alt="" srcset="" ng [ngStyle]="{'height': '16.666vh', 'width': '16.666vh'}">
         
           <p >{{project.description}}</p>
           <p>{{project.src}}</p>
@@ -20,3 +20,4 @@
   </div>
 
 </div>
+

@@ -12,7 +12,15 @@ $sn_n_cols : 12;
     display:none;
     list-style: none;
     width:100%;
-  
+    input, input:hover{
+      background-color: rgb(255, 0, 239);
+      overflow: hidden;
+      margin: 1vh 0vh;
+      max-width: 100%;
+      box-sizing: border-box;
+      color: rgb(0, 249, 255);
+      border:1px solid #cccccc;
+    }
   }
 .site-navigation{
 
@@ -46,9 +54,10 @@ $sn_n_cols : 12;
       background-color: rgb(255, 0, 239);
       color: rgb(0, 249, 255);
       .nested-menu{display:block;}
-      .nested-menu *:hover{
+      .nested-menu li:hover{
         background:blue;
         a{color:white;}
+        width:auto;
   
       }
       p{
@@ -84,4 +93,6 @@ $sn_n_cols : 12;
       
     }
   }
-  
+* {
+  font-size: 1.5rem;
+}

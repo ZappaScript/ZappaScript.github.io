@@ -16,12 +16,21 @@ export class ProjectGridComponent implements OnInit {
 
   constructor(private projectService: ProjectsService, private paginationService: PaginationService) { }
   ngOnInit() {
-    this.projectService.getProjects().subscribe(data => {
+    let ps = this.projectService;
+    ps.getProjects().subscribe(data => {
       this._projects = data;
       this._projects.forEach(project => {
         console.log(project);
-        this.projectService.getLanguages(project.name).subscribe(
-        res => {console.log('lRes',res);project.languages = res;} );
+
+        ps.getLanguages(project.name).subscribe(
+          res => {console.log('lRes',res);project.languages = res;} 
+          );
+        ps.getImage(project.name).subscribe(
+          res =>{project.previewImage = ps.getSafeUrl(`data:image/png;base64,${res.content}`)
+          console.log(project.previewImage);
+          ;}
+          )
+        ps.addTopics(project.topics)
       });
       
       this.paginationService.setNumPages(Math.ceil(this._projects.length / 4))
@@ -31,10 +40,12 @@ export class ProjectGridComponent implements OnInit {
   }
 
   ngDoCheck() {
-    console.log('I execute');
-    console.log(this._projects);
-    this.projects = this._projects.slice((this.paginationService.getCurrentIndex() - 1) * 4,
+    if (typeof this._projects != 'undefined'){
+      this.projects = this._projects.slice((this.paginationService.getCurrentIndex() - 1) * 4,
       this.paginationService.getCurrentIndex() * 4);
-
+      }
+    if (typeof this.projectService.topicsSet != undefined){
+      console.log(this.projectService.topicsSet);
+    }
   }
 }
