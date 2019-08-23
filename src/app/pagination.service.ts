@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { ProjectsService } from './projects-service.service';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +10,7 @@ export class PaginationService {
   public currentIndex: number = 1;
   public pageNumber = 0;
   
-  constructor() { }
+  
   setNumPages(nPages:number){
     
     this.pageNumber = nPages;
